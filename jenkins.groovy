@@ -8,10 +8,9 @@ pipeline {
                     // 获取当前工作目录
                     def currentDir = pwd()
                     // 定义所需的目标路径
-                    def targetDir = "/path/to/target/directory"
+                    def targetDir = "/var/jenkins_home/inventory/github"
                     if (currentDir == targetDir) {
                         echo "当前路径正确：$currentDir"
-                        // 在这里执行您的构建步骤
                     } else {
                         error "当前路径不正确。期望路径为：$targetDir，但实际路径为：$currentDir"
                     }
